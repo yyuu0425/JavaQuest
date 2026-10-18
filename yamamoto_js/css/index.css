@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+/* すべてのページに適応 */
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  width: 130px;
+  height: 70px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid black;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* index.htmlに適応 */
+
+.index-body {
+  background-image: url(../images/jigoku.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title-box {
+  position: fixed;
+  z-index: 1;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title,
+.sabu-title,
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  animation: down 2s;
+}
+
+.title img {
+  width: 800px;
+  height: auto;
+}
+
+.sabu-title {
+  animation: down 2.5s;
+  font-size: 45px;
+  font-weight: bold;
+  text-shadow: 3px 3px 0 black;
+  color: white;
+  text-align: center;
+}
+
+.enemys img {
+  width: 200px;
+  height: auto;
+  position: fixed;
+}
+
+.akaheru {
+  top: 80px;
+  left: 80px;
+  animation: akaheru 1s infinite alternate;
+}
+
+.kappa {
+  top: 40px;
+  right: 100px;
+  animation: kappa 1.5s infinite alternate;
+}
+
+.nurarihyon {
+  bottom: 50px;
+  left: 100px;
+  animation: nurarihyon 2s infinite alternate;
+}
+
+.enemys img.tengu {
+  bottom: 50px;
+  right: 40px;
+  width: 230px;
+  height: auto;
+  animation: tengu 2.5s infinite alternate;
+}
+
+.yuusya {
+  position: fixed;
+  width: 300px;
+  height: auto;
+  bottom: 10px;
+  right: 200px;
+}
+
+@keyframes down {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes akaheru {
+  from {
+    transform: rotate(-10deg);
+  }
+
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes kappa {
+  from {
+    transform: translate(0, 50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes nurarihyon {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes tengu {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(40px, 40px);
+  }
+}
